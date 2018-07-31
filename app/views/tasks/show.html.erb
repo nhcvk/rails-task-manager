@@ -1,0 +1,9 @@
+<h1>Task manager</h1>
+
+<h2><%= check_box_tag("checkbox", @task.id, @task.completed ? true : false, disabled: true ) %>
+  <%= @task.title %></h2>
+<p><%= @task.details %></p>
+
+<%= link_to "Edit this task", edit_path, class: 'button' %>
+
+<%= link_to "back to list", tasks_path %>

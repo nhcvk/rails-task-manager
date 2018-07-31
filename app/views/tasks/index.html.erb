@@ -1,0 +1,10 @@
+<h1>Task manager</h1>
+
+
+<% @tasks.each do |task| %>
+  <h2><%= check_box_tag("checkbox", task.id, task.completed ? true : false, disabled: true ) %>
+  <%= link_to task.title, task_path(task) %></h2>
+  <p><%= task.details %></p>
+<% end %>
+
+<%= link_to "Add new task", new_path %>
